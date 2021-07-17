@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <img src="Image/bg.jpg" id="bg">
+        <img src="Image/moon.png" id="moon">
+        <img src="Image/mountain.png" id="mountain">
+        <img src="Image/road.png" id="road">
+        <h2 id="text">Moon Light</h2>
+    </section>
+    <section class="moon">
+        <h1>MoonLight</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat veniam, dolorum ea similique magni, minus quidem iure, delectus qui deserunt molestiae officiis! Iure unde magnam veniam facere ab dolorem at.<br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat iusto, repellendus quisquam aperiam repellat unde inventore natus mollitia ipsam eum modi magnam voluptate veniam consequatur eos ipsa expedita sequi laborum.<br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error hic non libero ipsum esse laudantium illo amet sunt minima molestiae laboriosam, beatae dicta, est sed dolores? Molestias sed placeat dicta.</p>
+    </section>
+    <script type="text/javascript">
+        let bg = document.getElementById("bg");
+        let moon = document.getElementById("moon");
+        let mountain = document.getElementById("mountain");
+        let road = document.getElementById("road");
+        let text = document.getElementById("text");
+
+        window.addEventListener('scroll', function () {
+            var value = window.scrollY;
+
+            bg.style.top = value * 0.5 + 'px';
+            moon.style.left = -value * 0.5 + 'px';
+            mountain.style.top = -value * 0.15 + 'px';
+            road.style.top = value * 0.15 + 'px';
+            text.style.top = value * 1+ 'px';
+        })
+    </script>
+</body>
+
+</html>
